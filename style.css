@@ -1,0 +1,356 @@
+/* Global */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica;
+}
+
+/* HEADER AND NAVBAR STYLES */
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px 50px;
+    box-shadow: 0 2px 5px rgb(48, 48, 48);
+    background-color: rgb(25, 101, 25);
+}
+
+#nav-title {
+    margin-right: auto;
+
+}
+
+/* CHANGE NAV TO RESIZE INTO HAMBURGER MENU AT 700px WIDTH */
+#logo {
+    font-size: 1.8em;
+    font-family: 'Caveat', cursive;
+}
+
+header li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+header a {
+    text-decoration: none;
+    color: rgb(255, 241, 222);
+    transition: all 0.3s ease 0s;
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+}
+
+header a:hover {
+    color: #e8dd65;
+}
+
+#login {
+    margin-left: auto;
+    font-size: 25px;
+}
+
+/* END HEADER */
+
+
+/* SVG STUFF */
+
+path {
+    fill: rgb(245, 237, 226) !important;
+}
+
+path:hover {
+    fill: orange !important;
+    transform: scale(1.0025, 1.0025);
+}
+
+a>path:active {
+    fill: rgba(202, 136, 89, 0.742) !important;
+}
+
+
+/* LOGIN PAGE */
+
+#login-page {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-image: url(bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#login-tab {
+    background-color: rgb(255, 255, 255);
+    width: 35%;
+    min-width: 40%;
+    border-radius: 10px;
+    margin: 0;
+    position: absolute;
+    top: 20rem;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#create-tab {
+    background-color: rgb(255, 255, 255);
+    width: 35%;
+    min-width: 40%;
+    border-radius: 10px;
+    margin: 0;
+    position: absolute;
+    top: 21rem;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.form>* {
+    margin: 0 2rem;
+}
+
+.form-title {
+    font-family: 'Amatic SC', cursive;
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+#login-tab,
+#create-tab,
+.form-input,
+.form-button {
+    font: 500 1rem 'Roboto', cursive;
+}
+
+.form-hidden {
+    display: none;
+}
+
+.form>*:first-child {
+    margin-top: 0;
+}
+
+.form>*:last-child {
+    margin-bottom: 2rem;
+}
+
+.form-message {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-family: 'Covered By Your Grace', cursive;
+    font-size: 1.5rem;
+}
+
+.form-text,
+.form-link {
+    font-family: 'Covered By Your Grace', cursive;
+    font-size: 1.2rem;
+}
+
+.form-text:first-child {
+    margin-top: 1.3rem;
+}
+
+.form-message-success {
+    color: rgb(25, 101, 25);
+}
+
+.form-message-error {
+    color: rgb(241, 35, 35);
+}
+
+.form-input-group {
+    margin-bottom: 1rem;
+}
+
+.form-input {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid #dddddd;
+    outline: none;
+    background-color: #dddddd;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.form-input:focus {
+    border-color: rgb(25, 101, 25);
+    background: white;
+}
+
+.form-input-error {
+    color: rgb(241, 35, 35);
+    border-color: rgb(241, 35, 35);
+}
+
+.form-input-error-message {
+    font-family: 'Roboto', cursive;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: rgb(241, 35, 35);
+}
+
+#submit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-button {
+    width: 60%;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    background: rgb(25, 101, 25);
+}
+
+.form-button:hover {
+    background-color: rgb(20, 77, 20);
+}
+
+.form-button:active {
+    transform: scale(0.98);
+}
+
+.form-text {
+    text-align: center;
+}
+
+.form-link {
+    color: rgb(136, 106, 64);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form-link:hover {
+    text-decoration: underline;
+}
+
+
+/* CONTACT PAGE */
+
+#contact-page {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-image: url(bg2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#contact-tab {
+    background-color: rgb(255, 255, 255);
+    width: 35%;
+    min-width: 30%;
+    border-radius: 10px;
+    margin: 0;
+    position: absolute;
+    top: 20rem;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#contact-info {
+    margin: 1rem 1rem;
+}
+
+.contact-link {
+    color: rgb(136, 106, 64);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+.contact-title {
+    font-family: 'Amatic SC', cursive;
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+}
+
+.contact-user {
+    border: solid black 1px;
+}
+
+.contact-user:nth-child(1) {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.contact-user:last-child {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+/* ABOUT ME PAGE */
+#about-page {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-image: url(bg3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#about-tab {
+    background-color: rgb(255, 255, 255);
+    width: 35%;
+    min-width: 30%;
+    border-radius: 10px;
+    margin: 0;
+    position: absolute;
+    top: 20rem;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border: solid black 1px;
+}
+
+#description {
+    font-family: 'Roboto', cursive;
+    margin: 1em 1em;
+}
+
+/* GALLERY STYLES */
+
+#photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem;
+    justify-content: space-between;
+}
+
+.album {
+    background-color: rgba(136, 106, 64, 0.829);
+    flex: 0 0 30%;
+    height: 250px;
+    margin: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.photo {
+    justify-content: space-around;
+    margin: auto;
+    width: 33.3333%;
+    height: auto;
+}

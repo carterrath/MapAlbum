@@ -1,0 +1,66 @@
+/* Global */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica;
+}
+
+/* HEADER AND NAVBAR STYLES */
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px 50px;
+    box-shadow: 0 2px 5px rgb(48, 48, 48);
+    background-color: rgb(25, 101, 25);
+}
+
+#nav-title {
+    margin-right: auto;
+
+}
+
+/* CHANGE NAV TO RESIZE INTO HAMBURGER MENU AT 700px WIDTH */
+#logo {
+    font-size: 1.8em;
+    font-family: 'Caveat', cursive;
+}
+
+header li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+header a {
+    text-decoration: none;
+    color: rgb(255, 241, 222);
+    transition: all 0.3s ease 0s;
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+}
+
+header a:hover {
+    color: #e8dd65;
+}
+
+#login {
+    margin-left: auto;
+    font-size: 25px;
+}
+
+/* END HEADER */
+
+/*SVG manipulation*/
+
+#map-div {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.map {
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+}
