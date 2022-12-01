@@ -20,6 +20,17 @@ header {
 
 }
 
+#USA-MAP {
+    width: 75%;
+    margin: auto;
+    margin-top: 35px;
+}
+
+#state-selector {
+    margin-top: 35px;
+    margin-left: 20px;
+}
+
 /* CHANGE NAV TO RESIZE INTO HAMBURGER MENU AT 700px WIDTH */
 #logo {
     font-size: 1.8em;
