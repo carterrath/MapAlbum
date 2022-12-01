@@ -248,6 +248,11 @@ a>path:active {
 }
 
 
+#login-errors {
+    text-align: center;
+    margin-left: 10px;
+}
+
 /* CONTACT PAGE */
 
 #contact-page {

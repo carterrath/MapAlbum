@@ -26,16 +26,17 @@
         <a id="login" href="login.html">Log-In</a>
     </header>
     <div>
+
         <div id="login-tab" class="">
             <h1 class="form-title">Log-In</h1>
-            <form action="" class="form" id="login">
+            <form action="ValidateUser.php" method="post" class="form" id="login">
                 <div class="form-message form-message-error "></div>
                 <div class="form-input-group">
-                    <input type="text" class="form-input" autofocus placeholder="Email Address">
+                    <input type="email" class="form-input" name="email" autofocus placeholder="Email Address">
                     <div class="form-input-error-message"></div>
                 </div>
                 <div class="form-input-group">
-                    <input type="password" class="form-input" placeholder="Password">
+                    <input type="password" class="form-input" name="password" placeholder="Password">
                     <div class="form-input-error-message"></div>
                 </div>
                 <div id="submit-button">
@@ -51,20 +52,21 @@
                 </div>
             </form>
         </div>
+
         <div id="create-tab" class="form-hidden">
             <h1 class="form-title">Create Account</h1>
-            <form action="" class="form" id="createAccount">
+            <form action="RegisterUser.php" method="post" class="form" id="createAccount">
                 <div class="form-message form-message-error "></div>
                 <div class="form-input-group">
-                    <input type="text" class="form-input" autofocus placeholder="Email Address">
+                    <input type="email" class="form-input" name="email" autofocus placeholder="Email Address">
                     <div class="form-input-error-message"></div>
                 </div>
                 <div class="form-input-group">
-                    <input type="password" class="form-input" placeholder="Password">
+                    <input type="password" class="form-input" name="password" placeholder="Password">
                     <div class="form-input-error-message"></div>
                 </div>
                 <div class="form-input-group">
-                    <input type="password" class="form-input" placeholder="Confirm Password">
+                    <input type="password" class="form-input" name="password_confirm" placeholder="Confirm Password">
                     <div class="form-input-error-message"></div>
                 </div>
                 <div id="submit-button">
@@ -77,6 +79,7 @@
                 </div>
             </form>
         </div>
+
     </div>
     <script src="login.js"></script>
 </body>
