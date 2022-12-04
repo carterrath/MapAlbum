@@ -34,7 +34,33 @@
         <a id="login" href="../login.php">Log-In</a>
     </header>
 
+    <div class="pin">
+        <svg width="101.26379mm" height="151.3492mm" viewBox="0 0 101.26379 151.3492" version="1.1" id="svg5"
+            inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)" sodipodi:docname="pin.svg"
+            xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+            xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg"
+            xmlns:svg="http://www.w3.org/2000/svg">
+            <sodipodi:namedview id="namedview7" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25"
+                inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0"
+                inkscape:deskcolor="#d1d1d1" inkscape:document-units="mm" showgrid="false" inkscape:zoom="0.89263468"
+                inkscape:cx="154.03838" inkscape:cy="336.08374" inkscape:window-width="2560"
+                inkscape:window-height="1377" inkscape:window-x="1912" inkscape:window-y="-8"
+                inkscape:window-maximized="1" inkscape:current-layer="layer1" />
+            <defs id="defs2" />
+            <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1"
+                transform="translate(-53.296647,-59.445556)">
+                <g id="g5372" transform="translate(-12.449102,5.0389222)">
+                    <ellipse style="fill:#c01014;fill-opacity:1;stroke:#000000;stroke-width:0.264583" id="path234"
+                        cx="129.52994" cy="94.553894" rx="37.347305" ry="40.014969" />
+                    <path
+                        style="font-variation-settings:normal;opacity:1;fill:#080101;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+                        d="m 66.691614,205.11377 31.122755,-90.7006 28.455091,19.56287 z" id="path5367" />
+                </g>
+            </g>
+        </svg>
 
+
+    </div>
 
 
     <!-- Created with Inkscape (http://www.inkscape.org/) -->

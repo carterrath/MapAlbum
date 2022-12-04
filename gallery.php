@@ -37,15 +37,15 @@
         <a id="login" href="login.php">Log-In</a>
     </header>
 
-    <div id="photo-gallery">
-        <div class="album">
-            <img class="photo" src="photos/y1.jpg" alt="">
-            <img class="photo" src="photos/y2.jpg" alt="">
-            <img class="photo" src="photos/y3.jpg" alt="">
-            <img class="photo" src="photos/y4.jpg" alt="">
-            <img class="photo" src="photos/e1.jpg" alt="">
-            <img class="photo" src="photos/e2.jpg" alt="">
-        </div>
+    <div id="photo-gallery"></div>
+    <div class="album">
+        <img class="photo" src="photos/y1.jpg" alt="">
+        <img class="photo" src="photos/y2.jpg" alt="">
+        <img class="photo" src="photos/y3.jpg" alt="">
+        <img class="photo" src="photos/y4.jpg" alt="">
+        <img class="photo" src="photos/e1.jpg" alt="">
+        <img class="photo" src="photos/e2.jpg" alt="">
+    </div>
 
     </div>
     </div>
