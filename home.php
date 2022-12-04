@@ -11,39 +11,28 @@
 </head>
 
 <body>
+    <?php
+    if (isset($_GET['userID'])) {
+        $UserID = $_GET['userID'];
+    } else {
+        $UserID = 0;
+    }
+
+    require_once("config.php");
+    ?>
+
     <header>
-        <h1 id="nav-title"><a id="logo" href="home.html">Map Album</a></h1>
+        <h1 id="nav-title"><a id="logo" href="home.php?userID=<?= $UserID ?>">Map Album</a></h1>
         <nav>
             <ul>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="gallery.php?userID=<?= $UserID ?>">Gallery</a></li>
+                <li><a href="about.php?userID=<?= $UserID ?>">About</a></li>
+                <li><a href="contact.php?userID=<?= $UserID ?>">Contact</a></li>
             </ul>
         </nav>
-        <a id="login" href="login.html">Log-In</a>
+        <a id="login" href="login.php">Log-In</a>
     </header>
 
-    <input id="" type="button" value="Show States">
-
-    <form class="selection-form" action="" method="POST">
-        <div id="state-selector">
-            <input type="checkbox" id="state1" name="CA" value="CA">
-            <label for="state1">California</label>
-            <input type="checkbox" id="state1" name="TX" value="TX">
-            <label for="state1">Texas</label>
-            <input type="checkbox" id="state1" name="FL" value="FL">
-            <label for="state1">Florida</label>
-            <input type="checkbox" id="state1" name="CO" value="CA">
-            <label for="state1">California</label>
-            <input type="checkbox" id="state1" name="TN" value="TX">
-            <label for="state1">Texas</label>
-            <input type="checkbox" id="state1" name="NY" value="FL">
-            <label for="state1">Florida</label>
-            <input type="submit" name="submitVisits" id="visit">
-        </div>
-    </form>
-
-    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
     <!-- Created with Inkscape (http://www.inkscape.org/) -->
     <div id="USA-MAP">
         <svg viewBox="0 0 555.92627 365.45964" version="1.1" id="svg5" xml:space="preserve"
@@ -70,7 +59,7 @@
             </defs>
             <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1"
                 transform="translate(-149.9426,-84.054525)">
-                <a href="states/California.html">
+                <a href="states/California.php?userID=<?= $UserID ?>">
                     <path
                         style="fill:#fff5f5;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
                         d="m 166.13474,165.71379 39.05475,12.53494 -9.63506,31.61798 1.1693,1.59026 -2.3386,4.81753 0.56126,1.54348 41.25305,62.30052 c 0,0 0.5145,0.79512 0.93545,2.05798 0.42095,1.26286 2.19829,6.92229 2.19829,6.92229 l -0.14032,0.60804 -4.11595,5.23846 -1.12253,1.73059 c 0,0 -1.96443,4.72398 -2.15152,5.33201 -0.18709,0.60804 -0.56127,1.1693 -0.56127,1.1693 l 2.1983,5.33205 -1.07577,0.28061 -29.09228,-2.57246 -0.37418,-1.87087 -2.19829,-0.0936 2.38538,-6.08039 -4.2095,-5.1917 0.42095,-3.97563 -7.29645,-0.0468 1.82411,-4.11594 -12.34785,-9.58829 c 0,0 -6.40779,-2.05798 -8.37222,-2.43215 -1.96443,-0.37418 -1.91766,-5.00462 -1.59026,-6.64165 0.32741,-1.63703 0.56127,-8.23191 0.56127,-8.23191 l -3.74177,-4.34981 -2.29184,-6.45456 -1.30962,-3.32083 c 0,0 -0.56126,-1.35639 -0.56126,-2.24506 0,-0.88867 0.14031,-2.43215 0.14031,-2.43215 l -2.19829,-1.21608 c 0,0 0.28063,-5.42557 0.51449,-7.39 0.23386,-1.96443 0.98222,-4.91108 0.98222,-4.91108 l 0.8419,-0.74835 0.88867,-0.0468 1.73057,1.35639 -0.32741,-4.95785 c 0,0 0.14032,-0.56127 0.8419,-0.60804 0.70159,-0.0468 6.45456,-0.0468 6.2207,-0.0935 -0.23386,-0.0468 -7.0626,-0.5145 -7.0626,-0.5145 0,0 -2.05797,0.74836 -3.32082,1.3564 -1.26285,0.60803 -3.55468,-0.37418 -3.83532,-1.26285 -0.28063,-0.88867 -0.28063,-2.01121 0.46772,-2.47893 0.74836,-0.46772 1.91766,-1.35639 1.30963,-2.33861 -0.60804,-0.98221 -4.02241,-8.18512 -4.02241,-8.18512 l -2.80633,-1.26285 c 0,0 0.51449,-0.98222 1.87089,-1.82412 1.35639,-0.8419 1.63702,-4.81753 1.63702,-4.81753 0,0 0.88867,-3.695 0.8419,-4.58367 -0.0468,-0.88868 -2.99342,-8.55931 -2.99342,-8.55931 l 5.51912,-6.50133 0.0468,-3.18051 2.71279,-5.89329 -0.0468,-1.16931 -1.21607,-2.8531 2.24506,-0.88867 z"
@@ -116,7 +105,7 @@
                     style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#fff5f5;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
                     d="m 289.89387,338.44338 8.51255,1.30964 1.30961,-5.51913 18.98951,2.99341 v -3.08694 l 37.41772,4.0224 5.70622,-63.7037 -60.42964,-8.6996 z"
                     id="path313" />
-                <a href="states/Texas.html">
+                <a href="states/Texas.php?userID=<?= $UserID ?>">
                     <path
                         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#fff5f5;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
                         d="m 361.64239,280.25881 30.96316,2.80633 -1.12253,25.35052 8.13835,1.96443 9.91571,6.26747 2.7128,-1.40316 3.74176,4.39658 7.57709,-1.30961 1.77734,1.68378 1.02899,-1.68378 4.77075,1.02896 1.21608,1.59028 12.81557,-2.10476 6.17395,4.02241 1.26283,-0.93543 3.32083,1.68378 0.0935,16.83797 2.94667,6.40779 0.51448,1.26286 0.60804,5.47235 1.73056,2.38537 -1.07574,2.85311 0.37417,10.19633 -1.54347,3.8821 -9.86893,3.6482 -0.28065,-4.25624 -4.30302,2.0112 1.54347,4.49011 2.75955,-0.18708 -1.35638,3.55467 -2.85311,-1.12252 -12.76879,6.64165 -4.77076,2.66602 -5.51913,5.05138 -7.62386,0.5145 4.724,0.74835 -0.98224,6.17392 -3.6482,0.0468 5.14493,15.20095 -0.42096,3.74179 -5.23848,-2.94667 -9.30765,-0.23384 -5.19173,-4.67722 -4.25625,-6.08039 -1.87089,-9.58829 -4.16272,-3.08697 -6.59487,-14.54613 -6.64165,-8.27868 -15.94932,-5.09815 -3.88207,3.08694 -3.92888,7.57709 -14.35904,-8.98025 -1.21608,-4.86431 -2.99342,-9.30765 -14.82677,-17.25893 0.0935,-3.36759 37.04354,3.97563 4.02241,-43.54488 z"
@@ -190,7 +179,7 @@
                     style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#fff5f5;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
                     d="m 519.35813,301.86757 0.56126,2.15151 0.28065,2.24507 -1.30964,35.17265 -0.18708,5.23848 0.8419,16.46381 3.36759,-1.12253 1.12252,-9.26089 2.43216,9.72863 -2.52569,2.24504 5.42557,-1.4967 0.84191,-0.93546 -0.65482,-8.41899 27.50203,-1.59025 -1.21607,-9.82215 2.3386,-8.41899 -4.77076,-7.95126 -5.79975,-25.63114 z"
                     id="path328" />
-                <a href="states/Florida.html">
+                <a href="states/Florida.php?userID=<?= $UserID ?>">
                     <path
                         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#fff5f5;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
                         d="m 529.82809,354.0125 0.46302,8.26822 1.52136,-0.33072 2.64583,-2.31511 -0.39687,3.83646 5.29166,-0.33073 v -1.38906 l -2.84427,-0.59531 3.83646,-1.98438 3.04271,0.66146 -1.45521,2.11667 5.15937,-0.39688 1.98438,1.45521 2.11667,-2.57969 1.38906,2.4474 -1.45521,1.38906 3.83646,5.09323 7.9375,-2.57969 5.75469,-4.29948 2.97656,1.12448 0.19844,2.31511 4.82864,0.79375 0.13229,1.52135 3.43959,2.18281 0.66145,3.57188 2.91042,-1.05834 2.64583,3.63802 -1.19062,12.63386 2.57969,2.71198 0.33073,-1.71979 2.64583,-1.25677 v 4.16718 l -3.10885,1.98438 0.13229,2.24896 2.44739,4.49791 5.88698,-0.85989 0.13229,3.57187 h -3.24114 l 1.19062,3.90261 5.42396,-2.11667 3.37344,7.73906 5.55625,0.8599 0.13229,1.5875 -2.3151,2.71198 3.0427,1.05833 -2.24895,2.57969 5.68854,0.7276 4.36562,-3.57187 -1.05833,-2.18282 0.33073,-1.78593 c 0,0 0.26458,-0.66146 0.26458,-1.05834 0,-0.39687 0,-1.91823 0,-1.91823 l 1.25677,-1.19062 1.19063,-1.25677 -0.13229,-7.01146 c 0,0 -5.35782,-13.36146 -7.27605,-16.53646 -1.91822,-3.175 -5.35781,-8.73125 -5.35781,-8.73125 l 2.18281,-0.92604 -5.15937,-5.6224 1.25677,-1.19062 c 0,0 -5.82083,-12.7 -5.82083,-13.03073 0,-0.33073 -0.99219,-6.68073 -0.99219,-6.68073 l -5.4901,0.33073 -1.7198,4.23333 -1.52135,-1.4552 -30.69167,1.25677 -2.05052,-2.77813 z"
@@ -284,5 +273,7 @@
 
 
 </body>
+
+</html>
 
 </html>

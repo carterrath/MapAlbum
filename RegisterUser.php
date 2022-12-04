@@ -7,6 +7,7 @@
     <title>Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -67,6 +68,8 @@
         <p>Your new UserID is <strong>
                 <?php echo $UserID ?>
             </strong></p>
+
+        <p><a id="home-link" href="home.php?userID=<?= $UserID ?>">Map Album Home Page</a></p>
 
     </div>
 

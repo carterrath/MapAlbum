@@ -253,6 +253,20 @@ a>path:active {
     margin-left: 10px;
 }
 
+#home-link {
+    color: rgb(136, 106, 64);
+    text-decoration: none;
+    cursor: pointer;
+    font-family: 'Covered By Your Grace', cursive;
+    font-size: 2rem;
+}
+
+#home-link:hover {
+    color: rgb(20, 77, 20);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 /* CONTACT PAGE */
 
 #contact-page {

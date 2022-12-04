@@ -11,16 +11,25 @@
 </head>
 
 <body id="about-page">
+    <?php
+    if (isset($_GET['userID'])) {
+        $UserID = $_GET['userID'];
+    } else {
+        $UserID = 0;
+    }
+
+    require_once("config.php");
+    ?>
     <header>
-        <h1 id="nav-title"><a id="logo" href="home.html">Map Album</a></h1>
+        <h1 id="nav-title"><a id="logo" href="home.php?userID=<?= $UserID ?>">Map Album</a></h1>
         <nav>
             <ul>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="gallery.php?userID=<?= $UserID ?>">Gallery</a></li>
+                <li><a href="about.php?userID=<?= $UserID ?>">About</a></li>
+                <li><a href="contact.php?userID=<?= $UserID ?>">Contact</a></li>
             </ul>
         </nav>
-        <a id="login" href="login.html">Log-In</a>
+        <a id="login" href="login.php">Log-In</a>
     </header>
     <div id="about-tab" class="">
         <h1 class="form-title">About</h1>
