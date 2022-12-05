@@ -23,6 +23,20 @@
 
 
     require_once("config.php");
+
+    $AlbumTable = "photo_albums";
+    $PhotosTable = "photos";
+    $UserTable = "user_info";
+
+    $sql = "SELECT * FROM $AlbumTable WHERE userID = '$UserID'";
+
+    $result = $pdo->query($sql);
+
+    $i = 0;
+    // retrieve albumID based on userID
+    while ($row = $result->fetch()) {
+        $AlbumID[] = $row["albumID"];
+    }
     ?>
 
     <header>
@@ -37,18 +51,19 @@
         <a id="login" href="login.php">Log-In</a>
     </header>
 
-    <div id="photo-gallery"></div>
-    <div class="album">
-        <img class="photo" src="photos/y1.jpg" alt="">
-        <img class="photo" src="photos/y2.jpg" alt="">
-        <img class="photo" src="photos/y3.jpg" alt="">
-        <img class="photo" src="photos/y4.jpg" alt="">
-        <img class="photo" src="photos/e1.jpg" alt="">
-        <img class="photo" src="photos/e2.jpg" alt="">
-    </div>
+    <?php
+    $sql = "SELECT $PhotosTable.source FROM $PhotosTable WHERE $PhotosTable.albumID = ANY(SELECT albumID from $AlbumTable) AND $UserID = $PhotosTable.userID";
+    $result = $pdo->query($sql);
 
-    </div>
-    </div>
+    $j = 0;
+    while ($row = $result->fetch()) {
+        $PhotoSource[] = $row['source'];
+        echo ("<img class='photo' src=$PhotoSource[$j] alt=''>");
+        $j++;
+    }
+
+    unset($PhotoSource);
+    ?>
 </body>
 
 </html>

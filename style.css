@@ -368,16 +368,6 @@ a>path:active {
     justify-content: space-between;
 }
 
-.album {
-    background-color: rgba(136, 106, 64, 0.829);
-    flex: 0 0 30%;
-    height: 250px;
-    margin: 10px;
-    overflow-y: auto;
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .photo {
     justify-content: space-around;
     margin: auto;
