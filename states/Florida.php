@@ -49,7 +49,7 @@
                 $PhotosTable = "photos";
                 $UserTable = "user_info";
 
-                $sql = "INSERT INTO $AlbumTable VALUES (NULL, 'CA', '$UserID')";
+                $sql = "INSERT INTO $AlbumTable VALUES (NULL, 'FL', '$UserID')";
                 $pdo->exec($sql);
 
                 $q = "SELECT albumID FROM $AlbumTable ORDER BY albumID DESC LIMIT 1;";
