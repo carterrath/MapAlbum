@@ -59,8 +59,38 @@ header a:hover {
     height: 100%;
 }
 
-.map {
+#map {
     display: block;
     margin: auto;
     margin-top: 40px;
+}
+
+#pin2 {
+    height: 50px !important;
+    width: 50px !important;
+    margin: 20px;
+    margin-left: 70%;
+    border: solid black;
+    padding: 10px;
+}
+
+#pin {
+    height: 50px !important;
+    width: 50px !important;
+    position: fixed;
+    /* Floating above */
+    transition: transform 0.23s;
+    /* Sticking effect */
+    pointer-events: none;
+    /* Allow clicking trough the div */
+    /* display: none; */
+}
+
+.form-hidden {
+    display: none;
+}
+
+#pinPlaced {
+    height: 50px;
+    width: 50px;
 }

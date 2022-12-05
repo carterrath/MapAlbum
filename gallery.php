@@ -52,7 +52,7 @@
     </header>
 
     <?php
-    $sql = "SELECT $PhotosTable.source FROM $PhotosTable WHERE $PhotosTable.albumID = ANY(SELECT albumID from $AlbumTable) AND $UserID = $PhotosTable.userID";
+    $sql = "SELECT $PhotosTable.source FROM $PhotosTable WHERE $PhotosTable.albumID = ANY(SELECT albumID from $AlbumTable WHERE $UserID = $AlbumTable.userID)";
     $result = $pdo->query($sql);
 
     $j = 0;

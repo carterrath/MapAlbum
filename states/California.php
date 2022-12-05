@@ -35,9 +35,8 @@
     </header>
 
     <div class="pin">
-        <svg width="101.26379mm" height="151.3492mm" viewBox="0 0 101.26379 151.3492" version="1.1" id="svg5"
-            inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)" sodipodi:docname="pin.svg"
-            xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+        <svg viewBox="0 0 101.26379 151.3492" version="1.1" id="svg5" inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+            sodipodi:docname="pin.svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
             xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg"
             xmlns:svg="http://www.w3.org/2000/svg">
             <sodipodi:namedview id="namedview7" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25"

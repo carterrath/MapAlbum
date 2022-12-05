@@ -36,8 +36,8 @@
 
     <!-- Created with Inkscape (http://www.inkscape.org/) -->
     <div class="map-div">
-        <svg class="map" width="145.02501mm" height="144.2755mm" viewBox="0 0 145.02501 144.2755" version="1.1"
-            id="svg4996" inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)" sodipodi:docname="Texas.svg"
+        <svg class="map" viewBox="0 0 145.02501 144.2755" version="1.1" id="svg4996"
+            inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)" sodipodi:docname="Texas.svg"
             xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
             xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg"
             xmlns:svg="http://www.w3.org/2000/svg">
