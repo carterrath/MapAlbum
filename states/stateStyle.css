@@ -57,17 +57,19 @@ header a:hover {
     display: flex;
     align-items: center;
     height: 100%;
+
 }
 
 #map {
     display: block;
     margin: auto;
     margin-top: 40px;
+    margin-bottom: 50px;
 }
 
 #pin2 {
-    height: 50px !important;
-    width: 50px !important;
+    height: 50px;
+    width: 50px;
     margin: 20px;
     margin-left: 70%;
     border: solid black;
@@ -75,8 +77,8 @@ header a:hover {
 }
 
 #pin {
-    height: 50px !important;
-    width: 50px !important;
+    height: 50px;
+    width: 50px;
     position: fixed;
     /* Floating above */
     transition: transform 0.23s;

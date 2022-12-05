@@ -52,17 +52,21 @@
     </header>
 
     <?php
-    $sql = "SELECT $PhotosTable.source FROM $PhotosTable WHERE $PhotosTable.albumID = ANY(SELECT albumID from $AlbumTable WHERE $UserID = $AlbumTable.userID)";
-    $result = $pdo->query($sql);
+    if ($UserID != 0) {
+        $sql = "SELECT $PhotosTable.source FROM $PhotosTable WHERE $PhotosTable.albumID = ANY(SELECT albumID from $AlbumTable WHERE $UserID = $AlbumTable.userID)";
+        $result = $pdo->query($sql);
 
-    $j = 0;
-    while ($row = $result->fetch()) {
-        $PhotoSource[] = $row['source'];
-        echo ("<img class='photo' src=$PhotoSource[$j] alt=''>");
-        $j++;
+        $j = 0;
+        while ($row = $result->fetch()) {
+            $PhotoSource[] = $row['source'];
+            echo ("<img class='photo' src=$PhotoSource[$j] alt=''>");
+            $j++;
+        }
+
+        unset($PhotoSource);
+    } else {
+        echo ("<h3>Sign in to show your gallery of photos!</h3>");
     }
-
-    unset($PhotoSource);
     ?>
 </body>
 
