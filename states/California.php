@@ -8,7 +8,7 @@
     <title>California</title>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="stateStyle.css" href="style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="stateStyle.css?v=<?php echo time(); ?>">
 </head>
 
 <body>
@@ -34,6 +34,80 @@
         </nav>
         <a id="login" href="../login.php">Log-In</a>
     </header>
+
+    <div id="input-menu" class="form-hidden">
+        <form action="" method="post" enctype="multipart/form-data">
+            Select image to upload:
+            <input type="file" name="fileToUpload[]" multiple="multiple" id="fileToUpload">
+            <input type="submit" value="Upload Image" name="submit">
+        </form>
+        <?php
+        // Check if image file is a actual image or fake image
+        if ((isset($UserID)) && ($UserID != 0)) {
+            if (isset($_POST["submit"])) {
+
+                $AlbumTable = "photo_albums";
+                $PhotosTable = "photos";
+                $UserTable = "user_info";
+
+                $sql = "INSERT INTO $AlbumTable VALUES (NULL, 'CA', '$UserID')";
+                $pdo->exec($sql);
+
+                $q = "SELECT albumID FROM $AlbumTable ORDER BY albumID DESC LIMIT 1;";
+
+                $result = $pdo->query($q);
+
+                while ($row = $result->fetch()) {
+                    $aID = $row["albumID"];
+                }
+
+                for ($i = 0; $i < count($_FILES["fileToUpload"]["name"]); $i++) {
+
+                    $target_dir = realpath(dirname(getcwd())) . "\\photos\\";
+                    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"][$i]);
+                    $uploadOk = 1;
+                    $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+
+                    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"][$i]);
+                    if ($check !== false) {
+                        echo "File is an image - " . $check["mime"] . ".";
+                        $uploadOk = 1;
+                    } else {
+                        echo "File is not an image.";
+                        $uploadOk = 0;
+                    }
+
+                    // Allow certain file formats
+                    if (
+                        $imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+                        && $imageFileType != "gif"
+                    ) {
+                        echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+                        $uploadOk = 0;
+                    }
+
+                    // Check if $uploadOk is set to 0 by an error
+                    if ($uploadOk == 0) {
+                        echo "Sorry, your file was not uploaded.";
+                        // if everything is ok, try to upload file
+                    } else {
+                        if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"][$i], $target_file)) {
+                            echo "The file " . htmlspecialchars(basename($_FILES["fileToUpload"]["name"][$i])) . " has been uploaded.";
+                        } else {
+                            echo "Sorry, there was an error uploading your file.";
+                        }
+                    }
+                    $photo = "photos/" . $_FILES["fileToUpload"]["name"][$i];
+                    // INSERT PHOTO
+                    $sql = "INSERT INTO $PhotosTable VALUES (NULL, '$photo', '$aID')";
+                    $pdo->exec($sql);
+
+                }
+            }
+        }
+        ?>
+
+    </div>
 
 
     <div id="pinFixed">
@@ -61,10 +135,6 @@
             </g>
         </svg>
     </div>
-
-
-
-
 
     <div id="pinHover" class="form-hidden">
         <svg id="pin" width="101.26379mm" height="151.3492mm" viewBox="0 0 101.26379 151.3492" version="1.1" id="svg5"
@@ -182,6 +252,8 @@
             </g>
         </svg>
     </div>
+
+
 
 
 

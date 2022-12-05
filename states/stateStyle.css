@@ -96,3 +96,9 @@ header a:hover {
     height: 50px;
     width: 50px;
 }
+
+div#input-menu {
+    margin-left: 2%;
+    margin-top: 20px;
+    position: absolute;
+}

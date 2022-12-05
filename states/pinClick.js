@@ -3,6 +3,15 @@ window.onload = function () {
     let state = document.querySelector("#map");
     let pinIsClicked = false;
 
+    function placedPin() {
+        const inputForm = document.querySelector("#input-menu");
+
+        inputForm.classList.remove("form-hidden");
+
+        document.querySelector("#submit-file").addEventListener("click", (e) => {
+        });
+    }
+
     pin.addEventListener('click', function () {
         let hoverPin = document.querySelector("#pinHover");
         hoverPin.classList.remove("form-hidden");
@@ -24,6 +33,8 @@ window.onload = function () {
             let hoverPin = document.querySelector("#pinHover");
             hoverPin.classList.add("form-hidden");
             pinIsClicked = false;
+            console.log("placed"); // this is where I will call another function to open a div
+            placedPin();
         }
     }, false);
 
