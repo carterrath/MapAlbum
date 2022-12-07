@@ -13,13 +13,27 @@
 
 <body>
     <?php
-    if (isset($_GET['userID'])) {
+    require_once("../config.php");
+
+    if (isset($_GET['userID']) && ($_GET['userID'] != 0)) {
         $UserID = $_GET['userID'];
+
+        $TableName = "user_info";
+
+        $sql = "SELECT email FROM $TableName WHERE userID = '$UserID'";
+
+        $result = $pdo->query($sql);
+
+        // retrieve albumID based on userID
+        if ($row = $result->fetch()) {
+            $Name = $row["email"];
+            $Name = strtok($Name, '@');
+        }
+
     } else {
         $UserID = 0;
+        $Name = "Log-In";
     }
-
-    require_once("../config.php");
     ?>
 
 
@@ -32,7 +46,9 @@
                 <li><a href="../contact.php?userID=<?= $UserID ?>">Contact</a></li>
             </ul>
         </nav>
-        <a id="login" href="../login.php">Log-In</a>
+        <a id="login" href="../login.php">
+            <?= $Name ?>
+        </a>
     </header>
 
     <div id="input-menu" class="form-hidden">
@@ -70,10 +86,10 @@
 
                     $check = getimagesize($_FILES["fileToUpload"]["tmp_name"][$i]);
                     if ($check !== false) {
-                        echo "File is an image - " . $check["mime"] . ".";
+                        // echo "File is an image - " . $check["mime"] . ".";
                         $uploadOk = 1;
                     } else {
-                        echo "File is not an image.";
+                        // echo "File is not an image.";
                         $uploadOk = 0;
                     }
 
@@ -82,19 +98,19 @@
                         $imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
                         && $imageFileType != "gif"
                     ) {
-                        echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+                        // echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
                         $uploadOk = 0;
                     }
 
                     // Check if $uploadOk is set to 0 by an error
                     if ($uploadOk == 0) {
-                        echo "Sorry, your file was not uploaded.";
+                        // echo "Sorry, your file was not uploaded.";
                         // if everything is ok, try to upload file
                     } else {
                         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"][$i], $target_file)) {
-                            echo "The file " . htmlspecialchars(basename($_FILES["fileToUpload"]["name"][$i])) . " has been uploaded.";
+                            // echo "The file " . htmlspecialchars(basename($_FILES["fileToUpload"]["name"][$i])) . " has been uploaded.";
                         } else {
-                            echo "Sorry, there was an error uploading your file.";
+                            // echo "Sorry, there was an error uploading your file.";
                         }
                     }
                     $photo = "photos/" . $_FILES["fileToUpload"]["name"][$i];
@@ -242,7 +258,7 @@
         </svg>
     </div>
 
-
+    <div id="photo-gallery"></div>
 
 
 

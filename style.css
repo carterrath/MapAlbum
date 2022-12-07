@@ -374,3 +374,18 @@ a>path:active {
     width: 33.3333%;
     height: auto;
 }
+
+.album {
+    background-color: rgba(136, 106, 64, 0.829);
+    flex: 30%;
+    height: 50vh;
+    margin: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 10%;
+}

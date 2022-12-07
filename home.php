@@ -12,13 +12,27 @@
 
 <body>
     <?php
-    if (isset($_GET['userID'])) {
+    require_once("config.php");
+
+    if (isset($_GET['userID']) && ($_GET['userID'] != 0)) {
         $UserID = $_GET['userID'];
+
+        $TableName = "user_info";
+
+        $sql = "SELECT email FROM $TableName WHERE userID = '$UserID'";
+
+        $result = $pdo->query($sql);
+
+        // retrieve albumID based on userID
+        if ($row = $result->fetch()) {
+            $Name = $row["email"];
+            $Name = strtok($Name, '@');
+        }
+
     } else {
         $UserID = 0;
+        $Name = "Log-In";
     }
-
-    require_once("config.php");
     ?>
 
     <header>
@@ -30,7 +44,9 @@
                 <li><a href="contact.php?userID=<?= $UserID ?>">Contact</a></li>
             </ul>
         </nav>
-        <a id="login" href="login.php">Log-In</a>
+        <a id="login" href="login.php">
+            <?= $Name ?>
+        </a>
     </header>
 
     <!-- Created with Inkscape (http://www.inkscape.org/) -->
