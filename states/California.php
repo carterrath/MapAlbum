@@ -225,29 +225,18 @@
                 <text xml:space="preserve"
                     style="font-size:3.175px;fill:#a52020;fill-opacity:1;stroke:#000000;stroke-width:0.264583"
                     x="70.362625" y="110.7002" id="text2573">
-                    <tspan sodipodi:role="line" id="tspan2571" style="stroke-width:0.264583" x="70.362625" y="110.7002">
-                        Sacramento</tspan>
                 </text>
                 <text xml:space="preserve"
                     style="font-size:3.175px;fill:#a52020;fill-opacity:1;stroke:#000000;stroke-width:0.264583"
                     x="103.17502" y="181.65518" id="text2573-0">
-                    <tspan sodipodi:role="line" id="tspan2571-9" style="stroke-width:0.264583" x="103.17502"
-                        y="181.65518">
-                        Los Angeles</tspan>
                 </text>
                 <text xml:space="preserve"
                     style="font-size:3.34406px;fill:#a52020;fill-opacity:1;stroke:#000000;stroke-width:0.278671"
                     x="80.089005" y="129.12927" id="text2573-2" transform="scale(0.9423212,1.0612093)">
-                    <tspan sodipodi:role="line" id="tspan2571-6" style="stroke-width:0.278671" x="80.089005"
-                        y="129.12927">
-                        San Francisco</tspan>
                 </text>
                 <text xml:space="preserve"
                     style="font-size:3.175px;fill:#a52020;fill-opacity:1;stroke:#000000;stroke-width:0.264583"
                     x="119.03281" y="205.66417" id="text2573-01">
-                    <tspan sodipodi:role="line" id="tspan2571-3" style="stroke-width:0.264583" x="119.03281"
-                        y="205.66417">
-                        San Diego</tspan>
                 </text>
             </g>
         </svg>
